@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Id </th>
+        <th>Marca </th>
+        <th>Modelo</th>
+        <th>ANio</th>
+        <th>Color</th>
+        <th>Precio</th>
+        <th>Fecha</th>
+    </tr>
+    @foreach (var rep in ViewData["Report"] as IList<ReportItem>)
+    {
+        <tr>
+            <td>@rep.Id</td>
+            <td>@rep.Make</td>
+            <td>@rep.Model</td>
+            <td>@rep.Year</td>
+            <td>@rep.Color</td>
+            <td>@rep.Price</td>
+            <td>@rep.Date</td>
+
+        </tr>
+
+    }
+</table>
